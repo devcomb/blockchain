@@ -1,0 +1,24 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: Devcomb Blockchain API
+  license:
+    name: EPL-2
+servers:
+- url: /{basePath}
+  description: The production API server
+  variables:
+    basePath:
+      default: v2
+paths:
+  /getCars:
+    get:
+      tags:
+      - "getCarsList"
+      summary: "Get all cars from blockchain. Testing"
+      description: ""
+      operationId: "getCars"
+      x-exegesis-controller: impl_api
+      responses:
+        200:
+          description: "successful operation"
